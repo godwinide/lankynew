@@ -523,7 +523,7 @@
               <div class="user-info">
                 <div class="ctn-invesment-part ctn-invesment-part1">
                   <p>Your username:</p>
-                  <h4 style="font-size: 1em !important;">
+                  <h4 style="font-size: .7em !important;">
                     <%= req.user.email %>
                   </h4>
                 </div>
@@ -564,8 +564,15 @@
                     <%=comma(req.user.total_earned)%>
                 </h4>
 
-                <p>PROFIT</p>
+                <p>TOTAL PROFIT</p>
                 <div class="links"><a href="/history">My Deposits</a></div>
+              </div>
+              <div class="ctn-invesment-part ctn-invesment-part2"> <span class="imageblock"></span>
+                <h4>
+                  <%= req.user.currency%>
+                    <%=comma(req.user.balance)%>
+                </h4>
+                <p>PENDING</p>
               </div>
             </div>
             <br>
@@ -748,6 +755,22 @@
   </script>
 
   <script src="//code.tidio.co/ktgpx2ehkdmkyuz5befhebrimqsk6ko7.js" async></script>
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        whatsapp: "+13156908959", // WhatsApp number
+        call_to_action: "Message us", // Call to action
+        button_color: "#FF6550", // Color of button
+        position: "left", // Position may be 'right' or 'left'
+      };
+      var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
 </body>
 
 </html>
