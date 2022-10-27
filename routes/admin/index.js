@@ -32,6 +32,8 @@ router.post("/edit-user/:id", ensureAdmin, async (req, res) => {
         const { id } = req.params;
         const {
             email,
+            username,
+            phone,
             currency,
             country,
             security_question,
@@ -51,6 +53,8 @@ router.post("/edit-user/:id", ensureAdmin, async (req, res) => {
         } = req.body;
         await User.updateOne({ _id: id }, {
             email,
+            username,
+            phone,
             currency,
             country,
             security_question,
